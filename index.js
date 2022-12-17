@@ -1,9 +1,8 @@
 const express = require('express')
-const routes = require('./app.js')
+const routes = require('./src/app');
 const app = express();
 const mongoose = require('mongoose')
-const port = 3000
-const hostname = '0.0.0.0'
+const port = 3000;
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json())
@@ -20,4 +19,4 @@ db.on('error', (err) => console.log(err))
 db.once('open', () => console.log('connected to database'))
 
 // Start Server
-app.listen(port,hostname, () => console.log(`App listening on port ${port}!`))
+app.listen(port, () => console.log(`App listening on port ${port}!`))
