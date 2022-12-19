@@ -1,19 +1,23 @@
 const express = require('express');
-const Subscribers = require("./models/subscribers");
+const Subscribers = require("./models/subscriber");
 const router = express.Router();
-let app = express();
-app.use(express.json());
 
 //router starts here
+
+/**Router for Homepage */
 
 router.route("/").get(async (req,res)=>{
     res.send("<h1>you are on capstone project 'get youtuber subscribers'</h1>");
 })
 
+/**Router for get subscribers */
+
 router.get("/subscribers",async (req,res)=>{
     let subscriber = await Subscribers.find();
     res.json(subscriber);
 })
+
+/**Router for get Subscribers and name */
 
 router.get("/subscribers/names",async (req,res)=>{
     let subscriber = await Subscribers.find();
@@ -28,6 +32,7 @@ router.get("/subscribers/names",async (req,res)=>{
     res.json(op);
 })
 
+/**Router for get subscribers by id */
 
 router.get("/subscribers/:id",async (req,res)=>{
     let id = req.params.id;
@@ -40,11 +45,6 @@ router.get("/subscribers/:id",async (req,res)=>{
     }
 })
 
-router.route('subscribers/post').post(async (req, res) => {
-	const data = new Subscribers(req.body);
-	await data.save()
-	res.send(data)
-})
 
 
 module.exports = router
