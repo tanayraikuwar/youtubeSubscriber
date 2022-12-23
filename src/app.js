@@ -1,49 +1,45 @@
 const express = require('express');
 const Subscribers = require("./models/subscriber");
-const router = express.Router();
+const router = express.Router(); //we create here router object to handle request and response
 
 //router starts here
 
 /**Router for Homepage */
 
 router.route("/").get(async (req,res)=>{
-    res.send("<h1>you are on capstone project 'get youtuber subscribers'</h1>");
+    //this is shown on our root page
+    res.send("<h1>You are on Capstone Project 'Get Youtube Subscribers' Homepage !!!!!</h1>");
 })
 
-/**Router for get subscribers */
+/** Router to get subscribers */
 
-router.get("/subscribers",async (req,res)=>{
-    let subscriber = await Subscribers.find();
+router.route("/subscribers").get(async (req,res)=>{
+    //here we don't need "__v" so we use (.select("-__v"))
+    let subscriber = await Subscribers.find().select("-__v");
     res.json(subscriber);
 })
 
-/**Router for get Subscribers and name */
+/**Router to get Subscribers and name */
 
-router.get("/subscribers/names",async (req,res)=>{
-    let subscriber = await Subscribers.find();
-    let op = [];
-
-    subscriber.map((val)=>{
-        let obj = {};
-        obj.name=val.name;
-        obj.subscribedChannel=val.subscribedChannel
-        op.push(obj);
-    })
-    res.json(op);
+router.route("/subscribers/names").get(async (req,res)=>{
+    let subscriber = await Subscribers.find().select("-_id -__v -subscribedDate");
+    res.json(subscriber);//here we get only two object field ie. "name" and "subscribedChannel"
 })
 
-/**Router for get subscribers by id */
+/**Router to get subscribers by id */
 
-router.get("/subscribers/:id",async (req,res)=>{
+router.route("/subscribers/:id").get(async (req,res)=>{
     let id = req.params.id;
-    try{
+    try{//on successful operation we get subscriber object of specific "_id"
         let subscriber = await Subscribers.findById(id);
         res.json(subscriber)
     }
-    catch(err){
-        res.status(400).json({ error: "database invalid" });
+    catch(err){//if error occurs we get error message with status code 400
+        res.status(400).json({ message: err.message });
     }
 })
+
+
 
 
 
