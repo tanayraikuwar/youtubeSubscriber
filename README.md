@@ -1,7 +1,7 @@
 # Get Youtube Subscribers
 This capston project is used to get an response with an array of 
 object as per our request send to the database. To make
-this project working we use different packages ie "Nodejs", "Expressjs" and "Mongoose". 
+this project working we use different packages ie "Nodejs", "Expressjs" and "Mongoose". For validation and testing we use "Mocha" and for it's assertion library we use "Chai".
 ## Features
 
 - Use to create data in database
@@ -27,11 +27,15 @@ https://youtube-subscriber.vercel.app/
 
 #### Question  - How to create Database on mongodb atlas?
 
-Answer : Run createDatabase.js using command (node createDatabase.js)
+Answer : Run following command to create database:
+
+```bash
+   node createDatabase.js
+``` 
 
 #### Question  - How to run tests this backend API ?
 
-Answer : Run following command to test the backend API
+Answer : Run following command to test the backend API:
 
 ```bash
   npm test
