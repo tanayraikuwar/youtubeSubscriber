@@ -46,3 +46,7 @@ Answer : Run following command to test the backend API:
 
 https://drive.google.com/file/d/1IF8UGgciOQCG9s5Nlrm7d7GBYjijCtmf/view?usp=sharing
 
+## Project Summary link
+
+https://drive.google.com/file/d/1Rg6Xfdy8BgRGE5XndMT3BiALlGLEgdHM/view?usp=sharing
+
