@@ -1,7 +1,5 @@
 # Get Youtube Subscribers
-This capston project is used to get an response with an array of 
-object as per our request send to the database. To make
-this project working we use different packages ie "Nodejs", "Expressjs" and "Mongoose". For validation and testing we use "Mocha" and for it's assertion library we use "Chai".
+This capston project is a backend API used to get an response with an array of object as per our request send to the database. To make this project working we use different packages ie "Nodejs", "Expressjs" and "Mongoose". For validation and testing we use "Mocha" and for it's assertion library we use "Chai".
 ## Features
 
 - Use to create data in database
