@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-24T12:53:17.996Z",
-    "end": "2022-12-24T12:53:20.116Z",
-    "duration": 2120,
+    "start": "2022-12-24T13:15:30.975Z",
+    "end": "2022-12-24T13:15:32.976Z",
+    "duration": 2001,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3643d9ec-6042-4e3d-91d2-f5bf703fe87d",
+      "uuid": "7b68b5ef-633b-4995-b556-a514702c2cdc",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8d30a566-03f6-4fbb-80b8-e9048fa52c9d",
+          "uuid": "58719176-8a35-449a-8591-04bef236f200",
           "title": "tasks API",
           "fullFile": "/home/nubiecoder/Desktop/capstoneProject/get subscribers/youtubeSubscriber/__tests__/test.js",
           "file": "/__tests__/test.js",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "ccb3295b-8dd7-44ed-acde-cb3c186129fc",
+              "uuid": "863ed290-c829-450e-b297-0d25de2d23b7",
               "title": "GET /subscribers",
               "fullFile": "/home/nubiecoder/Desktop/capstoneProject/get subscribers/youtubeSubscriber/__tests__/test.js",
               "file": "/__tests__/test.js",
@@ -47,7 +47,7 @@
                   "title": "It should get all the subscribers",
                   "fullTitle": "tasks API GET /subscribers It should get all the subscribers",
                   "timedOut": false,
-                  "duration": 1816,
+                  "duration": 1815,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,8 +56,8 @@
                   "context": null,
                   "code": "chai.request(server)\n    .get(\"/subscribers\")\n    .end((err,response)=>{\n        response.should.have.status(200); \n        response.body.should.be.a(\"array\");\n        response.body.length.should.be.eq(3);\n    done();\n    });",
                   "err": {},
-                  "uuid": "08c27652-8b24-4b18-a694-0d36980a0037",
-                  "parentUUID": "ccb3295b-8dd7-44ed-acde-cb3c186129fc",
+                  "uuid": "16d6fa56-67d3-4587-872c-ec47e20b41fd",
+                  "parentUUID": "863ed290-c829-450e-b297-0d25de2d23b7",
                   "isHook": false,
                   "skipped": false
                 },
@@ -74,27 +74,27 @@
                   "context": null,
                   "code": "chai.request(server)\n    .get(\"/subscriber\")\n    .end((err,response)=>{\n        response.should.have.status(404);\n    done();\n    });",
                   "err": {},
-                  "uuid": "8aa15244-c58c-4e89-a97d-2b9d974449cb",
-                  "parentUUID": "ccb3295b-8dd7-44ed-acde-cb3c186129fc",
+                  "uuid": "6edb0d04-1df7-402a-b04d-499ea9640f9a",
+                  "parentUUID": "863ed290-c829-450e-b297-0d25de2d23b7",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "08c27652-8b24-4b18-a694-0d36980a0037",
-                "8aa15244-c58c-4e89-a97d-2b9d974449cb"
+                "16d6fa56-67d3-4587-872c-ec47e20b41fd",
+                "6edb0d04-1df7-402a-b04d-499ea9640f9a"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1830,
+              "duration": 1829,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
             },
             {
-              "uuid": "ab1f0fd1-cf4f-4845-9a28-d2ef0383b9de",
+              "uuid": "ce4de74a-92d4-4d35-b212-9e8936a0a6f3",
               "title": "GET /subscribers/names",
               "fullFile": "/home/nubiecoder/Desktop/capstoneProject/get subscribers/youtubeSubscriber/__tests__/test.js",
               "file": "/__tests__/test.js",
@@ -105,35 +105,35 @@
                   "title": "It should get all the subscribers with two fields",
                   "fullTitle": "tasks API GET /subscribers/names It should get all the subscribers with two fields",
                   "timedOut": false,
-                  "duration": 158,
+                  "duration": 71,
                   "state": "passed",
-                  "speed": "slow",
+                  "speed": "medium",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "chai.request(server)\n    .get(\"/subscribers/names\")\n    .end((err,response)=>{\n        response.should.have.status(200);\n        response.body.should.be.a(\"array\");\n        response.body.length.should.be.eq(3);\n    done();\n    });",
                   "err": {},
-                  "uuid": "7b89ef9b-bb7b-4831-b14c-87783dfd3a07",
-                  "parentUUID": "ab1f0fd1-cf4f-4845-9a28-d2ef0383b9de",
+                  "uuid": "da3ba29a-9ef3-4391-90f9-08d9b663374b",
+                  "parentUUID": "ce4de74a-92d4-4d35-b212-9e8936a0a6f3",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "7b89ef9b-bb7b-4831-b14c-87783dfd3a07"
+                "da3ba29a-9ef3-4391-90f9-08d9b663374b"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 158,
+              "duration": 71,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
             },
             {
-              "uuid": "4aaa5d56-9cf1-453a-a4d3-7be52e05ae93",
+              "uuid": "a5a42db7-61df-44f4-b97e-ebc220ab2188",
               "title": "GET /subscribers/:id",
               "fullFile": "/home/nubiecoder/Desktop/capstoneProject/get subscribers/youtubeSubscriber/__tests__/test.js",
               "file": "/__tests__/test.js",
@@ -144,17 +144,17 @@
                   "title": "It should get all the subscribers by id's",
                   "fullTitle": "tasks API GET /subscribers/:id It should get all the subscribers by id's",
                   "timedOut": false,
-                  "duration": 101,
+                  "duration": 69,
                   "state": "passed",
-                  "speed": "slow",
+                  "speed": "medium",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "const taskId = \"639f338cb9176f3c22707944\" //will be added\nchai.request(server)\n    .get(\"/subscribers/\"+ taskId)\n    .end((err,response)=>{\n        response.should.have.status(200);\n        response.body.should.be.a(\"object\");       \n        response.body.should.have.property(\"_id\");\n        response.body.should.have.property(\"name\");\n        response.body.should.have.property(\"subscribedChannel\");\n    done();\n    });",
                   "err": {},
-                  "uuid": "96f3aa43-9d66-497e-adf7-2a3440e883f6",
-                  "parentUUID": "4aaa5d56-9cf1-453a-a4d3-7be52e05ae93",
+                  "uuid": "3fc6c263-5b93-4b20-a456-16855874c11c",
+                  "parentUUID": "a5a42db7-61df-44f4-b97e-ebc220ab2188",
                   "isHook": false,
                   "skipped": false
                 },
@@ -162,7 +162,7 @@
                   "title": "It should not get all the subscribers by id's",
                   "fullTitle": "tasks API GET /subscribers/:id It should not get all the subscribers by id's",
                   "timedOut": false,
-                  "duration": 9,
+                  "duration": 8,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -171,21 +171,21 @@
                   "context": null,
                   "code": "const taskId = \"asdfasdfasd\" //will be added\nchai.request(server)\n    .get(\"/subscribers/\"+ taskId)\n    .end((err,response)=>{\n        response.should.have.status(400);\n    done();\n    });",
                   "err": {},
-                  "uuid": "f19a2255-0e08-4baf-a060-a028286b5e60",
-                  "parentUUID": "4aaa5d56-9cf1-453a-a4d3-7be52e05ae93",
+                  "uuid": "ddd5438b-31d7-493e-a2db-dbee418bc539",
+                  "parentUUID": "a5a42db7-61df-44f4-b97e-ebc220ab2188",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "96f3aa43-9d66-497e-adf7-2a3440e883f6",
-                "f19a2255-0e08-4baf-a060-a028286b5e60"
+                "3fc6c263-5b93-4b20-a456-16855874c11c",
+                "ddd5438b-31d7-493e-a2db-dbee418bc539"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 110,
+              "duration": 77,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
