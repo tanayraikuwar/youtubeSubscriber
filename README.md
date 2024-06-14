@@ -19,7 +19,7 @@ To start server run:
 ## Deployment
 This backend application is deployed on 
 
-https://youtube-subscriber.vercel.app/
+https://youtube-subscriber-capstone.vercel.app/
 
 ## FAQ
 
